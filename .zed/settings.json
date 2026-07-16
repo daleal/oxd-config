@@ -1,6 +1,10 @@
 {
   "lsp": {
     "oxlint": {
+      "binary": {
+        "path": "bun",
+        "arguments": ["run", "oxlint", "--lsp"]
+      },
       "initialization_options": {
         "settings": {
           "configPath": "./oxlint.config.ts"
@@ -8,6 +12,10 @@
       }
     },
     "oxfmt": {
+      "binary": {
+        "path": "bun",
+        "arguments": ["run", "oxfmt", "--lsp"]
+      },
       "initialization_options": {
         "settings": {
           "fmt.configPath": "./oxfmt.config.ts"
