@@ -1,0 +1,42 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "formatter": {
+    "eslint": { "disabled": true },
+    "oxfmt": {
+      "command": ["bunx", "oxfmt", "$FILE"],
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".ts",
+        ".tsx",
+        ".mts",
+        ".cts",
+        ".html",
+        ".htm",
+        ".css",
+        ".scss",
+        ".sass",
+        ".less",
+        ".vue",
+        ".svelte",
+        ".json",
+        ".jsonc",
+        ".yaml",
+        ".yml",
+        ".toml",
+        ".xml",
+        ".md",
+        ".mdx",
+        ".graphql",
+        ".gql",
+      ],
+    },
+  },
+  "lsp": {
+    "oxlint": {
+      "command": ["bun", "run", "oxlint", "--lsp"],
+    },
+  },
+}
