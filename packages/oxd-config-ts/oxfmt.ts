@@ -28,13 +28,13 @@ const createOxfmtConfig = (shorthands: string[]): OxfmtConfig => {
     semi: true,
     singleQuote: true,
     sortImports: {
-      customGroups: [shorthandComponents, shorthand],
+      customGroups: shorthands.length > 0 ? [shorthandComponents, shorthand] : [],
       groups: [
         'builtin',
         'external',
-        'shorthand',
+        ...(shorthands.length > 0 ? ['shorthand'] : []),
         'internal',
-        'shorthand-components',
+        ...(shorthands.length > 0 ? ['shorthand-components'] : []),
         'index',
         'parent',
         'sibling',

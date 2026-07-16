@@ -1,8 +1,8 @@
-import { oxfmt as typescriptOxfmt, oxlint as typescriptOxlint } from '@daleal/oxd-config-ts';
-import { oxfmt as vueOxfmt, oxlint as vueOxlint } from '@daleal/oxd-config-vue';
 import { describe, expect, test } from 'bun:test';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { oxfmt as typescriptOxfmt, oxlint as typescriptOxlint } from '@daleal/oxd-config-ts';
+import { oxfmt as vueOxfmt, oxlint as vueOxlint } from '@daleal/oxd-config-vue';
 
 const oxlintSchema = JSON.parse(
   readFileSync(
@@ -117,6 +117,14 @@ describe('TypeScript config', () => {
       internalPattern: ['@/', '#/'],
     });
   });
+
+  test('omits empty shorthand import groups', () => {
+    expect(typescriptOxfmt().sortImports).toMatchObject({
+      customGroups: [],
+      groups: ['builtin', 'external', 'internal', 'index', 'parent', 'sibling', 'style', 'unknown'],
+      internalPattern: [],
+    });
+  });
 });
 
 describe('Vue config', () => {
@@ -149,6 +157,15 @@ describe('Vue config', () => {
           elementNamePattern: ['~/**/components/**', '#/**/components/**'],
         },
         { groupName: 'shorthand', elementNamePattern: ['~/**', '#/**'] },
+      ]),
+    });
+  });
+
+  test('omits empty Vue shorthand import groups', () => {
+    expect(vueOxfmt({ shorthands: [] }).sortImports).toMatchObject({
+      customGroups: expect.not.arrayContaining([
+        expect.objectContaining({ groupName: 'shorthand-components' }),
+        expect.objectContaining({ groupName: 'shorthand' }),
       ]),
     });
   });
