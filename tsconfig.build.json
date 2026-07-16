@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/oxd-config-core/tsconfig.build.json" },
+    { "path": "./packages/oxd-config-ts/tsconfig.build.json" },
+    { "path": "./packages/oxd-config-vue/tsconfig.build.json" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": false,
+    "composite": true,
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "tsBuildInfoFile": "../../.cache/oxd-config-vue.tsbuildinfo"
+  },
+  "include": ["./*.ts"],
+  "references": [
+    { "path": "../oxd-config-core/tsconfig.build.json" },
+    { "path": "../oxd-config-ts/tsconfig.build.json" }
+  ]
+}

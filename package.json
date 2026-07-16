@@ -1,0 +1,24 @@
+{
+  "name": "@daleal/oxd-config",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@daleal/oxd-config-ts": "workspace:*",
+    "@daleal/oxd-config-vue": "workspace:*",
+    "@types/bun": "latest",
+    "oxfmt": "0.58.0",
+    "oxlint": "1.73.0",
+    "oxlint-plugin-eslint": "1.73.0",
+    "typescript": "^7.0.2"
+  }
+}
