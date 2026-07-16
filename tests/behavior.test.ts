@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, test } from 'bun:test';
-import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
@@ -10,6 +10,7 @@ let fixtureDirectory = '';
 let output = '';
 
 beforeAll(async () => {
+  await mkdir(join(WORKSPACE, '.cache'), { recursive: true });
   fixtureDirectory = await mkdtemp(join(WORKSPACE, '.cache/oxd-config-'));
   const presetUrl = pathToFileURL(resolve(WORKSPACE, 'packages/oxd-config-ts/dist/index.js')).href;
 
