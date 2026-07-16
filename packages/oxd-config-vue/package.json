@@ -1,6 +1,6 @@
 {
   "name": "@daleal/oxd-config-vue",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "daleal's opinionated Oxlint and Oxfmt configs for Vue + TypeScript projects",
   "homepage": "https://github.com/daleal/oxd-config/tree/main/packages/oxd-config-vue",
   "bugs": {
@@ -23,8 +23,8 @@
     }
   },
   "dependencies": {
-    "@daleal/oxd-config-core": "^0.0.1",
-    "@daleal/oxd-config-ts": "^0.0.1"
+    "@daleal/oxd-config-core": "^0.1.0",
+    "@daleal/oxd-config-ts": "^0.1.0"
   },
   "peerDependencies": {
     "oxfmt": "^0.58.0",

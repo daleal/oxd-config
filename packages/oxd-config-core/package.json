@@ -1,6 +1,6 @@
 {
   "name": "@daleal/oxd-config-core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Internal building blocks behind daleal's Oxlint and Oxfmt presets",
   "homepage": "https://github.com/daleal/oxd-config/tree/main/packages/oxd-config-core",
   "bugs": {

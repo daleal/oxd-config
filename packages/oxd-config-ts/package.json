@@ -1,6 +1,6 @@
 {
   "name": "@daleal/oxd-config-ts",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "daleal's opinionated Oxlint and Oxfmt configs for TypeScript projects",
   "homepage": "https://github.com/daleal/oxd-config/tree/main/packages/oxd-config-ts",
   "bugs": {
@@ -23,7 +23,7 @@
     }
   },
   "dependencies": {
-    "@daleal/oxd-config-core": "^0.0.1",
+    "@daleal/oxd-config-core": "^0.1.0",
     "oxlint-plugin-eslint": "1.73.0"
   },
   "peerDependencies": {
