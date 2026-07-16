@@ -23,7 +23,7 @@
     }
   },
   "dependencies": {
-    "@daleal/oxd-config-core": "^0.1.0",
+    "@daleal/oxd-config-core": "^0.0.1",
     "oxlint-plugin-eslint": "1.73.0"
   },
   "peerDependencies": {
